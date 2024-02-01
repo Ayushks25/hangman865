@@ -35,14 +35,12 @@ def ask_for_input():
     while True:
         print("Guess a single letter:")
         first_guess = input()
-        if len(first_guess)==1:
-            if (first_guess.isalpha()) == True:
+        if len(first_guess)==1 and first_guess.isalpha():
+            #if (first_guess.isalpha()) == True:
                 #print("Good guess!")
-                guess = first_guess
-                if check_guess(guess) == True:
-                    break
-            else:
-                print("Invalid letter. Please, enter a single alphabetical character.")
+            guess = first_guess
+            if check_guess(guess) == True:
+                break
         else:
             print("Invalid letter. Please, enter a single alphabetical character.")
 
